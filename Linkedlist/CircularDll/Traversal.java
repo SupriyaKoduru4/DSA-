@@ -1,8 +1,10 @@
+
 class Node {
+
     int data;
     Node next;
 
-    Node(int data){
+    Node(int data) {
         this.data = data;
         this.next = null;
     }
@@ -13,21 +15,21 @@ public class Traversal {
     static Node head;
 
     // Create circular linked list 
-    public static void createList(){
+    public static void createList() {
         Node first = new Node(10);
         Node second = new Node(20);
         Node third = new Node(30);
 
         first.next = second;
         second.next = third;
-        third.next = first; 
+        third.next = first;
 
         head = first;
     }
 
-    // TRAVERSAL 
-    public static void printList(){
-        if(head == null){
+    // traveseral
+    public static void printList() {
+        if (head == null) {
             System.out.println("List is empty!");
             return;
         }
@@ -35,18 +37,18 @@ public class Traversal {
         Node temp = head;
         System.out.print("Circular List: ");
 
-        do{
+        do {
             System.out.print(temp.data + " -> ");
             temp = temp.next;
-        }while(temp != head);
+        } while (temp != head);
 
         System.out.println("(head)");
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         createList();
 
-        printList(); 
+        printList();
     }
 }

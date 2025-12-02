@@ -7,8 +7,6 @@
 //     }
 // }
 
-
-
 // we dont know the array inside number and we need to assign number to array
 public class accessnumber {
 
@@ -23,7 +21,7 @@ public class accessnumber {
 
         //insert new number to array.so create a new bigger array.
         int[] newMarks = new int[marks.length + 1];
-         
+
         // copy old values
         for (int i = 0; i < marks.length; i++) {
             newMarks[i] = marks[i];
